@@ -3,7 +3,7 @@ on:
     branches:
       - main
 
-job:
+jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
@@ -15,7 +15,7 @@ job:
           env: develop
 
       - name: dummy deploy
-      - run: echo "ref {{ github.ref }}"
+        run: echo "ref ${{ github.ref }}"
 
       - name: update deployment
         uses: bobheadxi/deployments@v1.4
