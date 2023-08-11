@@ -15,6 +15,7 @@ sub startup ($self) {
 
   # Normal route to controller
   $r->post('/users')->to('User#create');
+  $r->get('/users/:id')->to('User#get');
 }
 
 1;

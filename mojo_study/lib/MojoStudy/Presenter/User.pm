@@ -7,6 +7,7 @@ has 'user' => (is => 'ro', isa => 'MojoStudy::Entity::User');
 
 sub make_contents ($self) {
     return +{
+        id   => $self->user->id,
         name => $self->user->name,
     };
 }
